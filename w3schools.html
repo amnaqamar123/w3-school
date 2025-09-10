@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3schools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: relative;
+            height: auto;
+            width: 100%;
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .nav-bar {
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+        }
+
+        .div {
+            height: 40px;
+            width: 230px;
+            margin-left: 30px;
+            padding: 2px 20px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 5px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+        }
+
+        .div:hover,
+        .ul>li:hover {
+            background-color: rgb(244, 244, 244);
+
+        }
+
+        .heading {
+            font-size: 15px;
+            font-weight: 400;
+            font-family: Verdana, sans-serif;
+            color: black;
+            letter-spacing: 5px;
+            margin-left: 10px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .heading1 {
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 5px;
+
+            font-family: Verdana, sans-serif;
+            color: black;
+            text-align: center;
+            display: inline-block;
+            margin-left: 10px;
+            /* margin-top: -18px; */
+        }
+
+        .heading2 {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 7px;
+            font-family: Verdana, sans-serif;
+            color: black;
+        }
+
+        .ul {
+            height: 50px;
+            width: 30%;
+            margin-left: 47%;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .div2 {
+            height: 74px;
+            width: 40%;
+            position: absolute;
+            transform: translate(-30%, -30%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .ul>li {
+            font-size: 15px;
+            font-weight: 400;
+            color: black;
+            display: inline-block;
+            margin-top: 14px;
+            margin-left: 8%;
+            vertical-align: top;
+            letter-spacing: 5px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+            font-family: Verdana, sans-serif;
+        }
+
+        .div3 {
+            height: 74px;
+            width: 20%;
+            background-color: black;
+        }
+
+        .hd {
+            font-size: 36px;
+            font-weight: 700;
+            padding-top: 10px;
+            letter-spacing: 5px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .hd1 {
+            font-size: 36px;
+            font-weight: 400;
+            margin-left: 26%;
+            letter-spacing: 5px;
+            margin-top: -63px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: rgb(241, 241, 241);
+        }
+
+        /*/////////////////////////////////////////////////////////////////*/
+        @media screen and (max-width:1440px) {
+            .ul {
+                width: 30%;
+                margin-left: 70%;
+                margin-top: -45px;
+            }
+        }
+
+        @media screen and (max-width:1024px) {
+            .ul {
+                width: 40%;
+                margin-left: 60%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .ul {
+                width: 50%;
+                margin-left: 50%;
+            }
+
+            .div3 {
+                width: 23%;
+                height: 70px;
+            }
+
+            .div2 {
+                transform: translate(-40%, -30%);
+                width: 50%;
+            }
+
+            .hd1 {
+                margin-left: 25%;
+                margin-top: -60px;
+            }
+        }
+
+        @media screen and (max-width:598px) {
+            .ul {
+                display: none;
+            }
+
+            .hd1 {
+                display: none;
+            }
+
+            .div3 {
+                width: 30%;
+                height: 60px;
+                margin-left: 27%;
+                margin-top: -20px;
+
+            }
+
+            .hd {
+                padding-top: 3px;
+
+            }
+
+            .img {
+                margin-top: -45px;
+            }
+        }
+
+        @media screen and (max-width:474px) {
+            .div3 {
+                width: 37%;
+                margin-left: 19%;
+                margin-top: -16px;
+            }
+        }
+
+        @media screen and (max-width:406px) {
+            .div3 {
+                margin-top: -15px;
+                margin-left: 15%;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .div3 {
+                margin-top: -13px;
+
+            }
+        }
+
+        @media screen and (max-width:390px) {
+            .div3 {
+                margin-top: -8px;
+            }
+
+            .img {
+                margin-top: -50px;
+            }
+        }
+
+        @media screen and (max-width:380px) {
+            .div3 {
+                margin-top: -8px;
+                width: 46%;
+                margin-left: 16.6%;
+            }
+
+            .img {
+                margin-top: -43px;
+            }
+        }
+
+        @media screen and (max-width:376px) {
+            .div3 {
+                margin-top: -7px;
+            }
+        }
+
+        @media screen and (max-width:372px) {
+            .div3 {
+                margin-top: -6px;
+            }
+        }
+
+        @media screen and (max-width:368px) {
+            .div3 {
+                margin-top: -5px;
+            }
+        }
+
+        @media screen and (max-width:368px) {
+            .div3 {
+                margin-top: -4px;
+            }
+        }
+
+        @media screen and (max-width:366px) {
+            .div3 {
+                height: 50px;
+                margin-top: -5px;
+
+            }
+
+            .hd {
+                padding-top: 1px;
+            }
+
+        }
+
+        @media screen and (max-width:360px) {
+            .div3 {
+                margin-top: -3px;
+
+            }
+
+        }
+
+        @media screen and (max-width:350px) {
+            .div3 {
+                margin-top: -1px;
+            }
+        }
+
+        @media screen and (max-width:340px) {
+            .div3 {
+                margin-top: 2px;
+            }
+
+            .hd {
+                padding-top: -5px;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+            .div3 {
+                margin-top: 7px;
+            }
+        }
+
+        @media screen and (max-width:310px) {
+            .div3 {
+                height: 55px;
+                width: 55%;
+                margin-top: 8px;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+            .img {
+                margin-top: -6px;
+            }
+
+            .div3 {
+                width: 55%;
+                height: 60px;
+                margin-top: 1px;
+                margin-left: 12%;
+
+            }
+        }
+
+        .background {
+            height: auto;
+            width: 100%;
+            background-color: white;
+        }
+
+        .div-1 {
+            height: 50px;
+            margin-top: 50px;
+            margin-left: 3%;
+            width: 95%;
+            border-bottom: 1px solid grey;
+        }
+
+        .div-1>h1 {
+            font-size: 24px;
+            font-weight: 400;
+            color: black;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .box {
+            height: auto;
+            position: relative;
+            width: 23%;
+            margin-left: 1.3%;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .box>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .text-div {
+            height: 38px;
+            width: 52%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+        }
+
+        .text-div>h1 {
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding-top: 8px;
+            font-family: Verdana, sans-serif;
+        }
+
+        /*////////////////////////////////////////////////////////////////////////*/
+        @media screen and (max-width:768px) {
+            .box {
+                width: 46%;
+                margin-left: 2.5%;
+            }
+
+        }
+
+        @media screen and (max-width:600px) {
+            .box {
+                width: 92%;
+                margin-left: 4%;
+            }
+        }
+
+        .bg {
+            height: auto;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .div-2 {
+            height: 100px;
+            width: 95%;
+            margin-left: 3%;
+        }
+
+        .div-2>p {
+            font-size: 15px;
+            color: black;
+            font-family: Verdana, sans-serif;
+            font-weight: 400;
+            margin-top: 20px;
+            min-height: 100vh;
+            line-height: 23px;
+        }
+        .div-3{
+            height: 450px;
+            width: 21%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 3%;
+            margin-top: 20px;
+        }
+        .img-div{
+            height:auto ;
+            width: 100%;
+
+        }
+        .img-div>img{
+            height: 100%;
+            width: 100%;
+        }
+        .div-4{
+            height: 36px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .div-5{
+            height: 22px;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .div-6{
+            height: 67px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .heading4,.div-7>h1{
+            font-size: 24px;
+            font-weight: 400;
+            color: black;
+            font-family:  "Segoe UI", Arial, sans-serif;
+        }
+        .heading3{
+            font-size: 15px;
+            font-weight: 400;
+            color: grey;
+            font-family:  Verdana, sans-serif;
+
+        }
+        .paragraph,.div-8>p{
+            font-size: 15px;
+            font-weight: 400;
+            color: black;
+            font-family:  Verdana, sans-serif;
+        }
+        .button{
+            height: 38px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 400;
+            font-family:  Verdana, sans-serif;
+            background-color: rgb(244, 244, 244);
+            border: none;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover{
+            background-color: rgb(224, 224, 224);
+        }
+          /*////////////////////////////////////////////////////////////////////////*/
+          @media screen and (max-width:1024px){
+            .div-2{
+                height: 120px;
+                width: 93%;    
+            }
+          }
+          @media screen and (max-width:768px){
+          .div-3{
+                width: 45%;
+                padding-top: 5%;   
+            }
+        }
+        @media screen and (max-width:600px){
+                .div-3{
+                    width: 93%;
+                }
+                .div-2>p{
+                    font-size: 11px;
+                    line-height: 15px;
+                }
+                .div-1{
+                    width: 92%;
+                }
+                .heading4{
+                    font-size: 20px;
+
+                }
+                .heading3{
+                    font-size: 12px;
+                    margin-top: -10px;
+
+                }
+                .paragraph{
+                    font-size: 13px;
+                } 
+             }
+             @media screen and (max-width:462px){
+                .div-3{
+                    margin-left: 7%;
+                    width: 89%;
+                    margin-top: 150px;
+                }
+                .div-1{
+                    margin-left: 7%;
+                    width: 88%;
+                }
+                .div-2{
+                    margin-left: 7%;
+                    width: 86%;
+                }
+                .div-2>p{
+                    font-size: 15px;
+                    line-height: 22px;   
+                }
+                .box{
+                    margin-left: 7%;
+                    width: 88%;
+                }
+                .div{
+                    margin-left: 2%;
+                }
+                .img-div{
+                    height: 300px;
+                }
+                .paragraph{
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+                .button{
+                    margin-top: -20px;
+                }   
+             }
+      
+           
+          .bg1{
+            height: auto;
+            width: 100%;
+            background-color: white;
+          }
+          .div-7{
+            height: 68px;
+            width: 95%;
+            margin-left: 3%;
+            border-bottom: 1px solid grey;
+            margin-top: 90px;
+          }
+          .div-8{
+            height: 22px;
+            width: 95%;
+            margin-top: 20px;
+            margin-left: 3%;
+          }
+          .name{
+            height: 39px;
+            width: 95%;
+            margin-left: 3%;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 10px;
+            font-family:  Verdana, sans-serif;
+            border: 1px solid grey;
+          }
+          .button1{
+            font-size: 15px;
+            font-weight: 400;
+            height: 38px;
+            width:12%;
+            background-color: black;
+            color: white;
+            margin-top: 30px;
+            margin-left: 3%;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+            border: none;
+            font-family:  Verdana, sans-serif;
+          }
+          .button1:hover{
+            background-color: rgb(224, 224, 224);
+            color: black;    
+          }
+          .bg2{
+            height:auto;
+            width: 95%;
+            margin-left: 3%;
+            margin-top: 50px;
+          }
+          .bg2>img{
+            height: 100%;
+            width: 100%;
+          }
+          .div-9{
+            height: 84px;
+            background-color: black;
+            width: 100%;
+            padding-top: 1px;
+            margin-top: 10px;
+          }
+          .div-10{
+            height: 22px;
+            width: 15%;
+            margin-left: 40%;
+            margin-top: 30px;
+          }
+          .div-10>h1{
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            font-family: Verdana, sans-serif;
+            font-weight: 400;
+          }
+          .span{
+            text-decoration: underline;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+            cursor: pointer;
+          }
+          .span:hover{
+            color: green;
+          }
+             /*////////////////////////////////////////////////////////////////////////*/
+             @media screen and (max-width:768px){
+                .button1{
+                    width: 20%;
+                }
+                .div-10{
+                    width: 20%;
+                }
+             }
+           
+             @media screen and (max-width:600px){
+             .div-10{
+                    width: 30%;
+                }
+                .button1{
+                    font-size: 12px;
+                }
+                .bg2{
+                    width: 92%;
+                }
+            }
+            @media screen and (max-width:462px){
+                .name{
+                    width: 85%;
+                    margin-left: 7%;
+                }
+                .button1{
+                    margin-left: 7%;
+                    width: 32%;
+                    font-size: 15px;
+                }
+                .div-8{
+                    margin-left: 7%;
+                }
+                .div-7{
+                    width: 85%;
+                    margin-left: 7%;
+                
+                }
+                .bg2{
+                    width: 85%;
+                    margin-left: 7%;
+                }
+                .div-10{
+                    width: 35%;
+                    
+                }
+             }
+             @media screen and (max-width:480px){
+               .img{
+                margin-top: -8px;
+               }
+               .div3{
+                margin-top: 1px;
+                width: 35%;
+                margin-left: 22%;
+               }
+                
+             }
+             @media screen and (max-width:440px){
+                .box{
+                    width: 85%;
+                }
+                .heading4{
+                    font-size: 24px;
+                    margin-left: 2%;
+
+                }
+                .heading3{
+                    font-size: 15px;
+                    margin-left: 2%;
+
+                }
+                .div-1{
+                    width: 85%;
+                }
+                .img-div{
+                    width: 95%;
+                }
+                .img-div>img{
+                    height: 250px;
+                }
+                .paragraph{
+                    width: 90%;
+                    margin-left: 2%;
+                }
+                .button{
+                    width: 95%;
+                    margin-top: 10px;
+                    margin-left: 2%;
+                }
+                .box{
+                    margin-left: 8%;
+                }
+                .div-1{
+                    margin-left: 8%;
+                }
+                .div-2{
+                    margin-left: 8%;
+                }
+                .img-div{
+                    margin-left: 2%;
+                }
+                .div-7{
+                    margin-left: 9%;
+                }
+                .div-8{
+                    margin-left: 8%;
+                }
+                .name{
+                    margin-left: 8%;
+                } 
+                .button1{
+                    margin-left: 8%;
+                } 
+                .bg2{
+                    margin-left: 8%;
+                } 
+             }
+             @media screen and (max-width:430px){
+                .paragraph{
+                    width: 95%;
+                }
+                .img-div>img{
+                    margin-top: 40px;
+                }
+             }
+             @media screen and (max-width:390px){
+                .div-2{
+                    width: 80%;
+                }
+                .img-div>img{
+                    margin-top: 60px;
+                }
+             }
+             @media screen and (max-width:380px){
+                .div-2{
+                    width: 83%;
+                }
+                .button1{
+                    width: 40%;
+                }
+                .div-10{
+                    width: 40%;
+                }
+                .div3{
+                    width: 45%;
+                }
+
+             }
+             @media screen and (max-width:330px){
+                .div3{
+                    width: 50%;
+                    height: 60px;
+                    margin-left: 15%;
+                }
+                .img-div>img{
+                    height: 170px;
+                    margin-top: 130px; 
+                    width: 95%; 
+                    margin-left: 2%;
+                }
+                .div-1{
+                    width: 80%;
+                    margin-left: 10%;
+                }
+                .box{
+                    width: 80%;
+                    margin-left: 10%;
+                    margin-top: 10px;
+                }
+                .div-2{
+                    width: 80%;
+                    margin-left: 10%;
+                }
+                .button{
+                    width: 92%;
+                }
+                .div-10{
+                    width: 45%;
+                    margin-left: 30%;
+                }
+                .button1{
+                    width: 45%;
+                    margin-left: 10%;
+                }
+                .bg2{
+                    width: 80%;
+                    margin-left: 10%;
+                }
+                .name{
+                    width: 80%;
+                    margin-left: 10%;
+                }
+                .div-7{
+                    width: 80%;
+                    margin-left: 10%;
+
+                }
+                .div-8{
+                    width: 80%;
+                    margin-left: 10%;
+
+                }
+                .button{
+                    margin-left: 3%;
+
+                }
+                .heading2{
+                    margin-left: 3%;
+
+                }
+                .heading3{
+                    margin-left: 3%;
+
+                }
+                .paragraph{
+                    margin-left: 3%;
+
+                }
+                .div-3{
+                    height: 450px;
+                }
+             }
+            
+            
+
+    </style>
+</head>
+
+<body>
+    <main class="header">
+        <img class="img" src="./W3_CSS Template/architect.jpg" alt="">
+        <nav class="nav-bar">
+            <div class="div">
+                <h1 class="heading"><b>BR</b></h1>
+                <h1 class="heading1"> Architects</h1>
+            </div>
+            <ul class="ul">
+                <li>Projects</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="div2">
+            <div class="div3">
+                <h1 class="hd">BR</h1>
+            </div>
+            <h1 class="hd1">Architects</h1>
+        </div>
+
+    </main>
+    <section class="background">
+        <div class="div-1">
+            <h1>Projects</h1>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house5.jpg" alt="">
+            <div class="text-div">
+                <h1>Summer House</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house2.jpg" alt="">
+            <div class="text-div">
+                <h1>Brick House</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house3.jpg" alt="">
+            <div class="text-div">
+                <h1>Renovated</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house4.jpg" alt="">
+            <div class="text-div">
+                <h1>Barn House</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house2.jpg" alt="">
+            <div class="text-div">
+                <h1>Summer House</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house5.jpg" alt="">
+            <div class="text-div">
+                <h1>Brick House</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house4.jpg" alt="">
+            <div class="text-div">
+                <h1>Renovated</h1>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./W3_CSS Template/house3.jpg" alt="">
+            <div class="text-div">
+                <h1>Barn House</h1>
+            </div>
+        </div>
+    </section>
+    <section class="bg">
+        <div class="div-1">
+            <h1>About</h1>
+        </div>
+        <div class="div-2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div-3">
+            <div class="img-div">
+                <img src="./W3_CSS Template/team2.jpg" alt="">
+            </div>
+            <div class="div-4">
+                <h1 class="heading4">John Doe</h1>
+            </div>
+            <div class="div-5">
+                <h2 class="heading3">CEO & Founder</h2>
+            </div>
+            <div class="div-6">
+                <p class="paragraph">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <button class="button">Contact</button>
+        </div>
+        <div class="div-3">
+            <div class="img-div">
+                <img src="./W3_CSS Template/team1.jpg" alt="">
+            </div>
+            <div class="div-4">
+                <h1 class="heading4">Jane Doe</h1>
+            </div>
+            <div class="div-5">
+                <h2 class="heading3">Architect</h2>
+            </div>
+            <div class="div-6">
+                <p class="paragraph">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <button class="button">Contact</button>
+        </div>
+        <div class="div-3">
+            <div class="img-div">
+                <img src="./W3_CSS Template/team3.jpg" alt="">
+            </div>
+            <div class="div-4">
+                <h1 class="heading4">Mike Ross</h1>
+            </div>
+            <div class="div-5">
+                <h2 class="heading3">Architect</h2>
+            </div>
+            <div class="div-6">
+                <p class="paragraph">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <button class="button">Contact</button>
+        </div>
+        <div class="div-3">
+            <div class="img-div">
+                <img src="./W3_CSS Template/team4.jpg" alt="">
+            </div>
+            <div class="div-4">
+                <h1 class="heading4">Dan Star</h1>
+            </div>
+            <div class="div-5">
+                <h2 class="heading3">Architect</h2>
+            </div>
+            <div class="div-6">
+                <p class="paragraph">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            </div>
+            <button class="button">Contact</button>
+        </div>
+    </section>
+    <section class="bg1">
+        <div class="div-7">
+            <h1>Contact</h1>
+        </div>
+        <div class="div-8">
+            <p>Lets get in touch and talk about your next project.</p>
+        </div>
+        <input class="name" type="text" placeholder="Name">
+        <input class="name" type="email" placeholder="Email">
+        <input class="name" type="text" placeholder="Subject">
+        <input class="name" type="text" placeholder="Comment">
+        <button class="button1">SENT MESSAGE</button>
+    </section>
+    <section class="bg2">
+        <img src="./W3_CSS Template/map.jpg" alt="">
+    </section>
+    <section class="div-9">
+        <div class="div-10">
+            <h1>Powered by <span title="W3.CSS" class="span"> w3.css</span></h1>
+        </div>
+    </section>
+</body>
+
+</html>

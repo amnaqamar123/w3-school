@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: auto;
+            width: 100%;
+            background-color: white;
+        }
+
+        .nav-bar {
+            height: 50px;
+            width: 95%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: 400;
+            color: black;
+            font-family: Karma, sans-serif;
+
+        }
+
+        #icon {
+            font-size: 24px;
+            color: black;
+        }
+
+        .heading1 {
+            font-size: 24px;
+            font-weight: 400;
+            color: black;
+            font-family: Karma, sans-serif;
+        }
+
+        .food {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            height: auto;
+            margin-top: 30px;
+            width: 24.5%;
+        }
+
+        .img-div1 {
+            height: auto;
+            width: 100%;
+        }
+
+        .img-div1>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .div1 {
+            height: auto;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .div2 {
+            height: auto;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .div1>h1,
+        .div4>h1 {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: Karma, sans-serif;
+        }
+
+        .div2>p {
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: Karma, sans-serif;
+        }
+
+        .div3 {
+            height: auto;
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #icon1,
+        #icon2 {
+            font-size: 15px;
+            list-style-type: none;
+            margin-left: 2%;
+            color: black;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        #icon2,
+        #icon1:hover {
+            color: white;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            background-color: black;
+        }
+
+        .div-3 {
+            height: 50px;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            border-bottom: 1px solid grey;
+        }
+
+        .background {
+            height: auto;
+            width: 100%;
+            background-color: white;
+        }
+
+        .div4 {
+            height: auto;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .img-div2 {
+            height: auto;
+            width: 60%;
+            margin-top: 50px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .img-div2>img,
+        .img-div3>img,
+        .img-div4>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .div5 {
+            height: auto;
+            width: 100%;
+        }
+
+        .div6,
+        .div7 {
+            height: auto;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .div8 {
+            height: auto;
+            margin-top: 20px;
+            width: 92%;
+            padding-top: 20px;
+            margin: auto;
+        }
+
+        .div6>h1 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: rgb(0, 0, 0);
+            font-family: Karma, sans-serif;
+        }
+
+        .div7>h1 {
+            font-size: 16px;
+            text-align: center;
+            font-weight: 400;
+            color: rgb(0, 0, 0);
+            font-style: italic;
+            font-family: Karma, sans-serif;
+        }
+
+        .div8>p {
+            font-size: 15px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 22.5px;
+            color: rgb(0, 0, 0);
+            font-family: Karma, sans-serif;
+        }
+
+        .background1 {
+            height: auto;
+            width: 100%;
+            margin-top: 70px;
+            background-color: white;
+        }
+
+        .box1 {
+            height: auto;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .boxes {
+            height: auto;
+            width: 32%;
+        }
+
+        .div-1 {
+            height: auto;
+            width: 100%;
+        }
+
+        .div-1>h1 {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            color: rgb(0, 0, 0);
+            font-family: Karma, sans-serif;
+        }
+
+        .div-2 {
+            height: auto;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .span {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .div-2>p,
+        .div-4boxes>p,
+        .div-5boxes>p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            color: rgb(0, 0, 0);
+            font-family: Karma, sans-serif;
+        }
+
+        .div-4 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .div-5 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .img-div3,
+        .img-div4 {
+            height: auto;
+            margin-left: 5%;
+            width: 15%;
+        }
+
+        .div-4box,
+        .div-5box {
+            height: auto;
+            width: 40%;
+            margin-left: 4%;
+        }
+
+        .div-4boxes,
+        .div-5boxes {
+            height: auto;
+            margin-top: 2px;
+            width: 100%;
+        }
+
+        .div-4boxes>h1,
+        .div-5boxes>h1 {
+            font-size: 18px;
+            font-weight: 400;
+            font-family: Karma, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .div-4:hover,
+        .div-5:hover {
+            background-color: rgba(225, 225, 225);
+        }
+
+        .div-1box {
+            height: auto;
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+           flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .div-1box1 {
+            height: auto;
+            margin-top: 10px;
+            margin-left: 1%;
+            width: 15%;
+            background-color: black;
+        }
+
+        .div-1boxes {
+            height: auto;
+            margin-left: 1%;
+            margin-top: 10px;
+            width: 15%;
+            background-color: grey;
+        }
+
+        .div-1boxes1 {
+            height: auto;
+            margin-top: 10px;
+            margin-left: 1%;
+            width: 12%;
+            background-color: grey;
+        }
+
+        .div-1boxes>h1,
+        .div-1boxes1>h1 {
+            font-size: 12px;
+            font-weight: 400;
+            font-family: serif;
+            text-align: center;
+            color: white;
+        }
+
+        .div-1box1>h1 {
+            font-size: 15px;
+            font-weight: 400;
+            font-family: serif;
+            text-align: center;
+            color: white;
+        }
+
+        /*/////////////////////////////////////////////////////////////////*/
+        @media screen and (max-width:600px) {
+            .food {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:1032px) {
+            .img-div2 {
+                width: 80%;
+            }
+
+            .div8 {
+                width: 95%;
+
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .img-div2 {
+                width: 90%;
+            }
+
+            .div8 {
+                width: 92%;
+
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .img-div2 {
+                width: 85%;
+
+            }
+
+            .div8 {
+                width: 87%;
+
+            }
+        }
+
+        @media screen and (max-width:324px) {
+            .div8 {
+                width: 82%;
+            }
+
+            .div4 {
+                width: 82%;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width:1108px) {
+            .div-1boxes {
+                width: 17%;
+            }
+            .div-1box1{
+                width: 17%;
+            }
+            .div-1boxes1 {
+                width: 15%;
+            }
+            .div-4box,.div-5box{
+                width: 80%;
+            }
+        }
+        @media screen and (max-width:798px){
+            .div-1boxes,.div-1box1 {
+                width: 24%;
+            }
+            .div-1boxes1 {
+                width: 22%;
+            }
+            .img-div3,.img-div4{
+                width: 25%;
+            }   
+        }
+        @media screen and (max-width:794px){
+            .div-1boxes,.div-1box1 {
+                width: 23%;
+            }
+            .div-1boxes1 {
+                width: 22%;
+            }
+        }
+        @media screen and (max-width:792px){
+            .div-1boxes,.div-1box1 {
+                width: 25%;
+            }
+            .div-1boxes1 {
+                width: 20%;
+            }
+        }
+        @media screen and (max-width:780px){
+            .div-1boxes,.div-1box1 {
+                width: 24.1%;
+            }
+            .div-1boxes1 {
+                width: 23.5%;
+            }
+        }
+        @media screen and (max-width:630px){
+            .box1{
+                width: 295%;
+                display: flex;
+                flex-direction: column;
+            }
+            .boxes{
+                margin-top: 30px;
+                margin-left: 4%;
+                width: 25%;
+            }
+            .div-2{
+                width: 79%;
+            }
+            .img-div3,.img-div4{
+                width: 12%;
+            }
+            .div-1boxes,.div-1box1 {
+                width: 15%;
+            }
+            .div-1boxes1 {
+                width: 13%;
+            }   
+        }
+        @media screen and (max-width:400px){
+            .div-2{
+                width: 87%;
+            }
+            .boxes{
+                width: 30%;
+                margin-left: 2%;
+            }
+            .img-div3,.img-div4{
+                width: 12%;
+            }
+            .div-1boxes,.div-1box1 {
+                width: 18%;
+            }
+            .div-1boxes1 {
+                width: 16%;
+            }   
+
+        }
+        @media screen and (max-width:360px){
+            .div-1boxes,.div-1box1 {
+                width: 20%;
+            }
+            .div-1boxes1 {
+                width: 8%;
+
+            }
+            
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <i id="icon" class="fa-solid fa-bars"></i>
+            <h1 class="heading">My Food</h1>
+            <h1 class="heading1">Mail</h1>
+        </nav>
+        <section class="food">
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/sandwich.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>The Perfect Sandwich, A Real NYC Classic</h1>
+                </div>
+                <div class="div2">
+                    <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/steak.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>Let Me Tell You About This Steak</h1>
+                </div>
+                <div class="div2">
+                    <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum
+                        lipsum</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/cherries.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>Cherries, interrupted</h1>
+                </div>
+                <div class="div2">
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.
+                        <br><br>
+
+                        What else?
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/wine.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>Once Again, Robust Wine and Vegetable Pasta</h1>
+                </div>
+                <div class="div2">
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+        </section>
+        <section class="food">
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/popsicle.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>All I Need Is a Popsicle</h1>
+                </div>
+                <div class="div2">
+                    <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/salmon.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>Salmon For Your Skin</h1>
+                </div>
+                <div class="div2">
+                    <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum
+                        lipsum.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/sandwich.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>The Perfect Sandwich, A Real Classic</h1>
+                </div>
+                <div class="div2">
+                    <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img-div1">
+                    <img src="./W3_CSS Template/croissant.jpg" alt="">
+                </div>
+                <div class="div1">
+                    <h1>Le French</h1>
+                </div>
+                <div class="div2">
+                    <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                </div>
+
+            </div>
+        </section>
+        <ul class="div3">
+            <i id="icon1" class="fa-solid fa-angles-left"></i>
+            <li id="icon2">1</li>
+            <li id="icon1">2</li>
+            <li id="icon1">3</li>
+            <li id="icon1">4</li>
+            <i id="icon1" class="fa-solid fa-angles-right"></i>
+        </ul>
+        <div class="div-3"></div>
+    </header>
+    <section class="background">
+        <div class="div4">
+            <h1>About Me, The Food Man</h1>
+        </div>
+        <div class="img-div2">
+            <img src="./W3_CSS Template/chef.jpg" alt="">
+        </div>
+        <div class="div5">
+            <div class="div6">
+                <h1>I am Who I Am!</h1>
+            </div>
+            <div class="div7">
+                <h1>With Passion For Real, Good Food</h1>
+            </div>
+            <div class="div8">
+                <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an
+                    interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent
+                    tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                    congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
+                    condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            </div>
+        </div>
+        </div>
+        <div class="div-3"></div>
+    </section>
+    <section class="background1">
+        <div class="box1">
+            <div class="boxes">
+                <div class="div-1">
+                    <h1>FOOTER</h1>
+                </div>
+                <div class="div-2">
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+                        ultricies congue gravida diam non fringilla. <br><br>Powered by <span class="span">w3.css</span>
+                    </p>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="div-1">
+                    <h1>BLOG POSTS</h1>
+                </div>
+                <div class="div-4">
+                    <div class="img-div3">
+                        <img src="./W3_CSS Template/workshop.jpg" alt="">
+                    </div>
+                    <div class="div-4box">
+                        <div class="div-4boxes">
+                            <h1>Lorem</h1>
+                        </div>
+                        <div class="div-4boxes">
+                            <p>Sed mattis nunc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-5">
+                    <div class="img-div4">
+                        <img src="./W3_CSS Template/gondol.jpg" alt="">
+                    </div>
+                    <div class="div-5box">
+                        <div class="div-5boxes">
+                            <h1>Ipsum</h1>
+                        </div>
+                        <div class="div-5boxes">
+                            <p>Praes tinci sed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxes">
+                <div class="div-1">
+                    <h1>POPULAR TAGS</h1>
+                </div>
+                <div class="div-1box">
+                    <div class="div-1box1">
+                        <h1>Travel</h1>
+                    </div>
+                    <div class="div-1boxes">
+                        <h1>New York</h1>
+                    </div>
+                    <div class="div-1boxes">
+                        <h1>Dinner</h1>
+                    </div>
+                    <div class="div-1boxes">
+                        <h1>Salmon</h1>
+                    </div>
+                    <div class="div-1boxes">
+                        <h1>France</h1>
+                    </div>
+                    <div class="div-1boxes">
+                        <h1>Drinks</h1>
+                    </div>
+
+
+                    <div class="div-1boxes1">
+                        <h1>Ideas</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Flavors</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Cuisine</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Chicken</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Dressing</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Fried</h1>
+                    </div>
+                    <div class="div-1boxes1">
+                        <h1>Fish</h1>
+                    </div>
+
+
+                    <div class="div-1boxes">
+                        <h1>Duck</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
